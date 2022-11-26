@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Katalog Film</string>
+    <string name="created">Powered By Katalog Film</string>
+    <string name="desc_favorite_button">Favourite Button</string>
+    <string name="genre_duration">Genre , Duration</string>
+    <string name="genre">Genre</string>
+    <string name="movies">MOVIES</string>
+    <string name="movies_detail">Movies Detail</string>
+    <string name="movies_title">Movies Title</string>
+    <string name="photo">Photo</string>
+    <string name="synopsis">Synopsis</string>
+    <string name="version">Version 1.1.1</string>
+    <string name="tv_show">TV SHOW</string>
+</resources>

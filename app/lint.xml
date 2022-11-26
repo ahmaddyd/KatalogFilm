@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="IconExtension">
+        <ignore path="src/main/res/drawable/image_shang_chi.png" />
+    </issue>
+    <issue id="IconLauncherShape">
+        <ignore path="src/main/res/mipmap-hdpi/ic_logo.png" />
+    </issue>
+    <issue id="IconLocation">
+        <ignore path="src/main/res/drawable/image_alice_in_bonderland.jpg" />
+        <ignore path="src/main/res/drawable/image_black_widow.jpg" />
+        <ignore path="src/main/res/drawable/image_dont_breathe2.jpg" />
+        <ignore path="src/main/res/drawable/image_free_guy.jpg" />
+        <ignore path="src/main/res/drawable/image_godzilla_kong.jpg" />
+        <ignore path="src/main/res/drawable/image_hanna.jpg" />
+        <ignore path="src/main/res/drawable/image_hometown_cha_cha.jpg" />
+        <ignore path="src/main/res/drawable/image_itaewon_class.jpg" />
+        <ignore path="src/main/res/drawable/image_loki.jpg" />
+        <ignore path="src/main/res/drawable/image_lupin.png" />
+        <ignore path="src/main/res/drawable/image_money_heist.jpg" />
+        <ignore path="src/main/res/drawable/image_quite_place.jpg" />
+        <ignore path="src/main/res/drawable/image_raya.jpg" />
+        <ignore path="src/main/res/drawable/image_shang_chi.png" />
+        <ignore path="src/main/res/drawable/image_spiderman.jpg" />
+        <ignore path="src/main/res/drawable/image_start_up.jpg" />
+        <ignore path="src/main/res/drawable/image_the_conjuring.png" />
+        <ignore path="src/main/res/drawable/image_the_falcon.png" />
+        <ignore path="src/main/res/drawable/image_the_suicide_squad.jpg" />
+        <ignore path="src/main/res/drawable/image_vincenzo.jpg" />
+    </issue>
+</lint>

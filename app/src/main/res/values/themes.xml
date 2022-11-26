@@ -1,0 +1,11 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.Movies" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="colorPrimary">@color/orange</item>
+        <item name="colorPrimaryVariant">@color/orange</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/blue_200</item>
+        <item name="colorSecondaryVariant">@color/blue_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+    </style>
+</resources>

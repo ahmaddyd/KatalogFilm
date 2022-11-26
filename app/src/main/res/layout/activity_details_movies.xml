@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinator_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="RtlHardcoded">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:elevation="5dp" />
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsingAppbar"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:textSize="34sp"
+            app:contentScrim="?colorPrimary"
+            app:expandedTitleMarginBottom="94dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:title="Title">
+
+            <ImageView
+                android:id="@+id/avatars_details_movies"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                tools:ignore="ContentDescription"
+                tools:src="@tools:sample/avatars" />
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/image_shadow"
+                tools:ignore="ContentDescription" />
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@null"
+                app:layout_collapseMode="pin"
+                app:navigationIcon="@drawable/abc_ic_ab_back_material" />
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        app:behavior_overlapTop="78dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                app:cardBackgroundColor="@color/orange"
+                app:cardCornerRadius="50dp"
+                app:cardElevation="5dp"
+                app:contentPaddingBottom="20dp"
+                app:contentPaddingLeft="20dp"
+                app:contentPaddingRight="20dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_synopsis_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="@string/synopsis"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="TextContrastCheck,TextContrastCheck" />
+
+                    <TextView
+                        android:id="@+id/tv_movies_detail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center_vertical"
+                        android:minHeight="30dp"
+                        android:text="@string/movies_detail"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_synopsis_title"
+                        tools:ignore="TextContrastCheck,TextContrastCheck" />
+
+                    <TextView
+                        android:id="@+id/tv_genre_duration"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:lineSpacingExtra="5dp"
+                        android:text="@string/genre_duration"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_movies_detail"
+                        tools:ignore="TextContrastCheck,TextContrastCheck" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_favourite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:contentDescription="@string/desc_favorite_button"
+                android:foregroundGravity="bottom"
+                app:fabSize="normal"
+                app:layout_anchor="@id/view_pager"
+                app:layout_anchorGravity="bottom|end"
+                app:srcCompat="@drawable/ic_favourite"
+                tools:ignore="RedundantDescriptionCheck,RedundantDescriptionCheck,ImageContrastCheck,ImageContrastCheck"
+                tools:layout_editor_absoluteX="340dp"
+                tools:layout_editor_absoluteY="190dp" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
